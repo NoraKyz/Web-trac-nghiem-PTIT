@@ -14,6 +14,7 @@ class UserDataManager {
     }
 
     static getUserByUsername(username) {
+        this.userData = this.getUserData();
         for (let i = 0; i < this.userData.length; i++) {
             if (username == this.userData[i].username) {
                 return this.userData[i];
