@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
 </head>
 <body>
-    
-    <script src="script.js"></script>
+    <!-- an image sticky on bottom left -->
+    <img src="https://code.ptit.edu.vn/2020/images/bg_left.png" alt="logo" class="position-absolute bottom-0 start-0 d-none d-md-block" style="z-index: -1;" height="400px">
+    <img src="https://code.ptit.edu.vn/2020/images/bg_right.png" alt="logo" class="position-absolute bottom-0 end-0 d-none d-md-block" style="z-index: -1;" height="400px">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-4">
+                <div class="login-form">
+                    <h2 class="text-center mb-4">Login</h2>
+                    <form>
+                        <!-- email field with focus color is red -->
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label" for="remember">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                        <!-- Or text -->
+                        <p class="text-center mt-3">Or</p>
+                        <p class="text-center">Don't have an account? <a href="#">Sign up</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
