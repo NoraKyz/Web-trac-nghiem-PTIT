@@ -17,13 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 );
 
-
-function onClickLogin() {
+async function onClickLogin() {
     const username = document.getElementById('email-field').value;
     const password = document.getElementById('password-field').value;
 
     if (validateInput(username, password)) {
-        let user = UserDataManager.getUserByUsername(username);
+        let user = await getUserByUsername(username);
 
         if (user === null) {
             alert("User not found!");
@@ -51,4 +50,28 @@ function validatePassword(password) {
     const check = password.match(passwordRegex);
     if (!check) alert("Incorrect password!");
     return check;
+}
+
+async function getUserByUsername(username) {
+    let userData = await getUserData();
+    for (let i = 0; i < userData.length; i++) {
+        if (username == userData[i].username) {
+            return userData[i];
+        }
+    }
+
+    return null;
+}
+
+async function getUserData() {
+    const userDataUrl = '../../../data/data.json';
+
+    try {
+        const response = await fetch(userDataUrl);
+        let data = await response.json();
+        return data.users;
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+        return null;
+    }
 }

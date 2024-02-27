@@ -1,0 +1,12 @@
+{
+    "users" :[
+        {
+            "userId": "B21",
+            "username": "admin",
+            "password": "Abcd!234",
+            "name": "Lê Quý Long",
+            "dob": 1216544564,
+            "classname": "D21"
+        }
+    ]
+}
