@@ -7,15 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
     password.addEventListener('input', toggleButtonState);
 
     function toggleButtonState() {
-        // Check if both inputs have non-blank values
         if (username.value.trim() !== '' && password.value.trim() !== '') {
             loginButton.disabled = false;
         } else {
             loginButton.disabled = true;
         }
     }
-}
-);
+});
 
 async function onClickLogin() {
     const username = document.getElementById('email-field').value;
@@ -25,9 +23,9 @@ async function onClickLogin() {
         let user = await getUserByUsername(username);
 
         if (user === null) {
-            alert("User not found!");
+            alert("Username or password is incorrect!");
         } else if (password != user.password) {
-            alert("Incorrect password!");
+            alert("Username or password is incorrect!");
         } else {
             alert("Login successful!");
         }
@@ -39,16 +37,16 @@ function validateInput(username, password) {
 }
 
 function validateUsername(username) {
-    const usernameRegex = /^[a-zA-Z]+$/;
+    const usernameRegex = /^[a-zA-Z0-9]+$/;
     const check = username.match(usernameRegex);
-    if (!check) alert("User not found!");
+    if (!check) alert("Username or password is incorrect!");
     return check;
 }
 
 function validatePassword(password) {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     const check = password.match(passwordRegex);
-    if (!check) alert("Incorrect password!");
+    if (!check) alert("Username or password is incorrect!");
     return check;
 }
 
