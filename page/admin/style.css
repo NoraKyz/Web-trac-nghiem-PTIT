@@ -57,7 +57,7 @@ body {
 /* css thẻ a, không còn dâu gạch chân */
 a {
     text-decoration: none;
-    color: #000;
+    text-decoration-style: #fff;
 }
 /* css cho thẻ li, chiều dài = 2/3 chiều dài mặc đinh ban đầu, căn lề các li về bên phải, gióng theo nút menu  */
 li {
