@@ -42,8 +42,8 @@ function createQuestionElement(question, id) {
     let ophtml = '';
     for (let i = 0; i < question.answers.length; i++) {
         ophtml += `<div class="form-check">
-            <input class="form-check-input" type="radio" name="question${id}" id="option${i}" value="option${i}">
-            <label class="form-check-label" for="option${i}">${question.answers[i]}</label>
+            <input class="form-check-input" type="radio" name="question-${id}" id="q${id}-o${i}" value="${i}">
+            <label class="form-check-label" for="q${id}-o${i}">${question.answers[i]}</label>
         </div>`;
     }
     html += ophtml;
