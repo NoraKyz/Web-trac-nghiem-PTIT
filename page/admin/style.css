@@ -1,7 +1,7 @@
 body {
     background-color: #f8f9fa;
 }
-
+/* login */
 .red {
     background-color: #d30000;
 }
@@ -49,15 +49,21 @@ body {
     background-color: #d30000A0;
 }
 
-.form-check-input:focus {
-    border-color: #d3000084;
-    box-shadow: 0 0 0 0.2rem #d300004e;
-}
+/* dashboard */
 
-.form-check-input:checked {
+.navbar {
     background-color: #d30000;
 }
-
+/* css thẻ a, không còn dâu gạch chân */
 a {
-    color: #d30000;
+    text-decoration: none;
+    color: #000;
+}
+/* css cho thẻ li, chiều dài = 2/3 chiều dài mặc đinh ban đầu, căn lề các li về bên phải, gióng theo nút menu  */
+li {
+    width: 75%;   
+}
+li:hover {
+    border-color: #d3000084;
+    box-shadow: 0 0 0 0.1rem #d300004e;
 }
