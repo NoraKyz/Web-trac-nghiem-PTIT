@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const username = document.getElementById('email-field');
+    const username = document.getElementById('username-field');
     const password = document.getElementById('password-field');
     const loginButton = document.getElementById('login-button');
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 async function onClickLogin() {
-    const username = document.getElementById('email-field').value;
+    const username = document.getElementById('username-field').value;
     const password = document.getElementById('password-field').value;
 
     if (validateInput(username, password)) {
