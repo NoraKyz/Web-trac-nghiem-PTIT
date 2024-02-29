@@ -1,171 +1,5 @@
 var listExam = [
-    {
-        id: 1,
-        name: "Exam 1",
-        start: "2021-05-01 08:00:00",
-        duration: 60,
-        questions: [
-            {
-                id: 1,
-                content: "Question 1",
-                options: [
-                    { id: 1, content: "Option 1" },
-                    { id: 2, content: "Option 2" },
-                    { id: 3, content: "Option 3" },
-                    { id: 4, content: "Option 4" }
-                ],
-                answer: 1
-            },
-            {
-                id: 2,
-                content: "Question 2",
-                options: [
-                    { id: 1, content: "Option 1" },
-                    { id: 2, content: "Option 2" },
-                    { id: 3, content: "Option 3" },
-                    { id: 4, content: "Option 4" }
-                ],
-                answer: 1
-            },
-            {
-                id: 3,
-                content: "Question 3",
-                options: [
-                    { id: 1, content: "Option 1" },
-                    { id: 2, content: "Option 2" },
-                    { id: 3, content: "Option 3" },
-                    { id: 4, content: "Option 4" }
-                ],
-                answer: 1
-            }
-        ]
-    },
-
-    {
-        id: 2,
-        name: "Exam 2",
-        start: "2021-05-01 08:00:00",
-        duration: 60,
-        questions: [
-            {
-                id: 1,
-                content: "Question 1",
-                options: [
-                    { id: 1, content: "Option 1" },
-                    { id: 2, content: "Option 2" },
-                    { id: 3, content: "Option 3" },
-                    { id: 4, content: "Option 4" }
-                ],
-                answer: 1
-            },
-            {
-                id: 2,
-                content: "Question 2",
-                options: [
-                    { id: 1, content: "Option 1" },
-                    { id: 2, content: "Option 2" },
-                    { id: 3, content: "Option 3" },
-                    { id: 4, content: "Option 4" }
-                ],
-                answer: 1
-            },
-            {
-                id: 3,
-                content: "Question 3",
-                options: [
-                    { id: 1, content: "Option 1" },
-                    { id: 2, content: "Option 2" },
-                    { id: 3, content: "Option 3" },
-                    { id: 4, content: "Option 4" }
-                ],
-                answer: 1
-            }
-        ]
-    },
     
-        {
-            id: 3,
-            name: "Exam 3",
-            start: "2021-05-01 08:00:00",
-            duration: 60,
-            questions: [
-                {
-                    id: 1,
-                    content: "Question 1",
-                    options: [
-                        { id: 1, content: "Option 1" },
-                        { id: 2, content: "Option 2" },
-                        { id: 3, content: "Option 3" },
-                        { id: 4, content: "Option 4" }
-                    ],
-                    answer: 1
-                },
-                {
-                    id: 2,
-                    content: "Question 2",
-                    options: [
-                        { id: 1, content: "Option 1" },
-                        { id: 2, content: "Option 2" },
-                        { id: 3, content: "Option 3" },
-                        { id: 4, content: "Option 4" }
-                    ],
-                    answer: 1
-                },
-                {
-                    id: 3,
-                    content: "Question 3",
-                    options: [
-                        { id: 1, content: "Option 1" },
-                        { id: 2, content: "Option 2" },
-                        { id: 3, content: "Option 3" },
-                        { id: 4, content: "Option 4" }
-                    ],
-                    answer: 1
-                }
-            ]
-        },
-        
-                {
-                    id: 4,
-                    name: "Exam 4",
-                    start: "2021-05-01 08:00:00",
-                    duration: 60,
-                    questions: [
-                        {
-                            id: 1,
-                            content: "Question 1",
-                            options: [
-                                { id: 1, content: "Option 1" },
-                                { id: 2, content: "Option 2" },
-                                { id: 3, content: "Option 3" },
-                                { id: 4, content: "Option 4" }
-                            ],
-                            answer: 1
-                        },
-                        {
-                            id: 2,
-                            content: "Question 2",
-                            options: [
-                                { id: 1, content: "Option 1" },
-                                { id: 2, content: "Option 2" },
-                                { id: 3, content: "Option 3" },
-                                { id: 4, content: "Option 4" }
-                            ],
-                            answer: 1
-                        },
-                        {
-                            id: 3,
-                            content: "Question 3",
-                            options: [
-                                { id: 1, content: "Option 1" },
-                                { id: 2, content: "Option 2" },
-                                { id: 3, content: "Option 3" },
-                                { id: 4, content: "Option 4" }
-                            ],
-                            answer: 1
-                        }
-                    ]
-                }
 ];
 
 // generate exam list into exam-list element, use bootstrap card, edit and delete button beside and margin each card
@@ -178,7 +12,9 @@ function generateList() {
         card.innerHTML = `
             <div class="card-body">
                 <h5 class="card-title">${exam.name}</h5>
-                <p class="card-text">Start: ${exam.start}</p>
+                <p class="card-text">Start: ${
+                    exam.start ? new Date(exam.start).toLocaleString() : "Not set"
+                }</p>
                 <p class="card-text">Duration: ${exam.duration} minutes</p>
                 <a href="#" class="btn btn-primary">Edit</a>
                 <a href="#" class="btn btn-danger">Delete</a>
@@ -217,11 +53,13 @@ addExamForm.addEventListener("submit", function(event) {
     var examDate = document.getElementById("exam-date").value;
     var examTime = document.getElementById("exam-time").value;
     var examDuration = document.getElementById("exam-duration").value;
+    var typeExam = document.getElementById("exam-type").value;
+
 
     var newExam = {
         id: listExam.length + 1,
         name: examName,
-        start: `${examDate} ${examTime}`,
+        start: (typeExam == "free") ? null : new Date(`${examDate}T${examTime}`).getTime(),
         duration: examDuration,
         questions: []
     };

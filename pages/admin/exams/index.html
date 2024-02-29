@@ -35,18 +35,40 @@
                             <input type="text" class="form-control" id="exam-name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exam-date" class="form-label">Exam date</label>
-                            <input type="date" class="form-control" id="exam-date" required>
+                            <label for="exam-type" class="form-label">Exam type</label>
+                            <select class="form-select" id="exam-type" required>
+                                <option value="fixed">Fixed</option>
+                                <option value="free">Free</option>
+                            </select>
                         </div>
                         <div class="mb-3">
-                            <label for="exam-time" class="form-label">Exam time</label>
-                            <input type="time" class="form-control" id="exam-time" required>
+                            <label for="exam-date" class="form-label d-none">Exam date</label>
+                            <input type="date" class="form-control" id="exam-date">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exam-time" class="form-label d-none">Exam time</label>
+                            <input type="time" class="form-control" id="exam-time">
                         </div>
                         <div class="mb-3">
                             <label for="exam-duration" class="form-label">Exam duration</label>
                             <input type="number" class="form-control" id="exam-duration" required>
                         </div>
                         <button type="submit" class="btn btn-primary" id="save-exam-button">Save</button>
+
+                        <script>
+                            var type = document.getElementById('exam-type');
+                            var date = document.getElementById('exam-date');
+                            var time = document.getElementById('exam-time');
+                            type.addEventListener('change', function() {
+                                if (type.value === 'free') {
+                                    date.classList.add('d-none');
+                                    time.classList.add('d-none');
+                                } else {
+                                    date.classList.remove('d-none');
+                                    time.classList.remove('d-none');
+                                }
+                            });
+                        </script>
                     </form>
                 </div>
             </div>
