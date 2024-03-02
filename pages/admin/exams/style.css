@@ -6,32 +6,6 @@ body {
     background-color: #d30000;
 }
 
-.login-form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.login-form h2 {
-    color: #333;
-}
-
-.login-form input[type="email"],
-.login-form input[type="password"] {
-    border-radius: 5px;
-}
-
-.login-form button[type="submit"] {
-    border-radius: 5px;
-}
-
-@media (min-width: 768px) {
-    .login-form {
-        margin-top: 50px;
-    }
-}
-
 .form-control:focus {
     border-color: #d3000084;
     box-shadow: 0 0 0 0.2rem #d300004e;
@@ -72,6 +46,11 @@ li:hover {
     display: none;
 }
 
+.vertical-line {
+    border-left: 2px solid gray; /* Định dạng đường thẳng đứng */
+    height: 30px; /* Chiều cao của đường thẳng đứng */
+    color: white; /* Màu của đường thẳng đứng */
+}
 
 /* 
 .questionItem {

@@ -1,0 +1,47 @@
+body {
+    background-color: #f8f9fa;
+}
+/* login */
+.red {
+    background-color: #d30000;
+}
+
+@media (min-width: 768px) {
+    .login-form {
+        margin-top: 50px;
+    }
+}
+
+.form-control:focus {
+    border-color: #d3000084;
+    box-shadow: 0 0 0 0.2rem #d300004e;
+}
+
+.btn {
+    background-color: #d30000;
+}
+
+.btn:hover {
+    background-color: #d30000;
+}
+
+.btn:disabled {
+    background-color: #d30000A0;
+}
+
+/* dashboard */
+
+.navbar {
+    background-color: #d30000;
+}
+a {
+    text-decoration: none;
+    text-decoration-style: #fff;
+}
+li {
+    width: 75%;   
+}
+li:hover {
+    border-color: #d3000084;
+    box-shadow: 0 0 0 0.1rem #d300004e;
+}

@@ -1,7 +1,36 @@
 var listExam = [
+    {
+        id: 1,
+        name: "Exam 1",
+        start: 1628700000000,
+        duration: 60,
+        questions: []
+    },
+    {
+        id: 2,
+        name: "Exam 2",
+        start: 1628700000000,
+        duration: 60,
+        questions: []
+    },
+    {
+        id: 3,
+        name: "Exam 3",
+        start: 1628700000000,
+        duration: 60,
+        questions: []
+    }
     
 ];
-
+logoutBtn = document.getElementById('logoutBtn');
+logoutBtn.addEventListener('click', function () {
+    window.location.href = "../login_admin/index.html";
+});
+dashboard = document.getElementById('dashboard');
+dashboard.addEventListener('click', function () {
+    window.location.href = "../dashboard/index.html";
+});
+// 
 // generate exam list into exam-list element, use bootstrap card, edit and delete button beside and margin each card
 function generateList() {
     var examList = document.getElementById("exam-list");
@@ -10,18 +39,23 @@ function generateList() {
         var card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
+            <div class ="card w-75 mx-auto my-3">
+                <div class="card-header alert-warning d-flex justify-content-between align-items-center">
+                    <h5 class="card-title">${exam.name}</h5>
+                <div>
+                    <a href="#" class="btn btn-primary "><i class="bi bi-pencil-square"></i></a>
+                    <a href="#" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                </div>
+            </div>
             <div class="card-body">
-                <h5 class="card-title">${exam.name}</h5>
                 <p class="card-text">Start: ${
                     exam.start ? new Date(exam.start).toLocaleString() : "Not set"
                 }</p>
                 <p class="card-text">Duration: ${exam.duration} minutes</p>
-                <a href="#" class="btn btn-primary">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
                 <div class="mt-4">
-                <a href="/admin/exams/start?id=${exam.id}" class="btn btn-success">Start</a>
+                    <a href="/admin/exams/start?id=${exam.id}" class="btn btn-success">View</a>
+                </div>
             </div>
-            <div class="mt-4">
         `;
             
         examList.appendChild(card);

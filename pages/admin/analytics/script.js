@@ -1,3 +1,11 @@
+logoutBtn = document.getElementById('logoutBtn');
+logoutBtn.addEventListener('click', function () {
+    window.location.href = "../login_admin/index.html";
+});
+dashboard = document.getElementById('dashboard');
+dashboard.addEventListener('click', function () {
+    window.location.href = "../dashboard/index.html";
+});
 var data = {
     "exams": [
         {
@@ -34,33 +42,6 @@ var data = {
 }
 
 holder_container = document.getElementById('holder');
-
-// <div class="accordion-item">
-//                 <h2 class="accordion-header">
-//                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
-//                     Kiểm tra giữa kỳ I
-//                     </button>
-//                 </h2>
-//                 <div id="collapse0" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-//                     <div class="accordion-body">
-//                         <div class="d-flex justify-content-between  mb-5">
-//                             <h2 class="text-center">Kiểm tra giữa kỳ I</h2>
-//                             <button id="print-button-0" type="button" class="btn btn-sm btn-primary btn-outline-ptit"><span class="material-symbols-outlined">print</span></button>
-//                         </div>
-//                         <div class="row">
-//                             <div class="my-3 col-4">
-//                                 <canvas id="bieuDoThamGia0" height="370" style="display: block; box-sizing: border-box; height: 370px; width: 370px;" width="370"></canvas>
-//                                 <h5 class="text-center my-3">Tỉ lệ hoàn thành bài thi</h5>
-//                             </div>
-//                             <div class="my-3 col-8">
-                            
-//                                 <canvas id="bieuDoKhoangDiem0" height="382" style="display: block; box-sizing: border-box; height: 382px; width: 764px;" width="764"></canvas>
-//                                 <h5 class="text-center my-3">Thống kê khoảng điểm</h5>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
 
 data.exams.forEach((exam, i) => {
     let exam_container = document.createElement('div');
