@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-function onClickSignUp(){
+function onClickSignUp() {
     window.location.href = "../../user/register/index.html";
 }
 
@@ -31,7 +31,7 @@ async function onClickLogin() {
         } else if (password != user.password) {
             alert("Username or password is incorrect!");
         } else {
-            alert("Login successful!");
+            window.location.replace("../../user/dashboard/index.html");
         }
     }
 }
