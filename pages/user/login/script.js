@@ -19,6 +19,8 @@ async function onClickLogin() {
     const username = document.getElementById('username-field').value;
     const password = document.getElementById('password-field').value;
 
+    console.log('Username:', username, 'Password:', password);
+
     if (validateInput(username, password)) {
         let user = await getUserByUsername(username);
 
