@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+function onClickLogin() {
+    window.history.back();
+}
+
 async function onClickRegister() {
     const username = document.getElementById('username-field').value;
     const email = document.getElementById('email-field').value;

@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+function onClickSignUp(){
+    window.location.href = "../../user/register/index.html";
+}
+
 async function onClickLogin() {
     const username = document.getElementById('username-field').value;
     const password = document.getElementById('password-field').value;
