@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- image logo -->
+    <link rel="icon" href="https://code.ptit.edu.vn/2020/images/logo_ptit.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+        /* change color to danger */
+        .btn {
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+        .btn:hover {
+            background-color: #c9302c;
+            border-color: #ac2925;
+        }
+        .btn:focus {
+            background-color: #c9302c;
+            border-color: #ac2925;
+        }
+        .btn:active {
+            background-color: #c9302c;
+            border-color: #ac2925;
+        }
+        
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div id="main-container" class="bg-body-tertiary p-5 rounded-3 my-3 hidden" style="display: block;"><div class="accordion" id="accordionExample">
+                        <h2 class="text-center mb-4">Quản lý sinh viên</h2>
+
+        <!-- search bar -->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Tìm kiếm sinh viên" id="search-student">
+            <button class="btn btn-outline-secondary" type="button" id="search-student-btn">Tìm kiếm</button>
+        </div>
+        <div id="holder">
+
+        </div>
+
+        <!-- model with name, email, phone, dob, address -->
+        <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="studentModalLabel">Thông tin sinh viên</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Số điện thoại</label>
+                                <input type="text" class="form-control" id="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dob" class="form-label">Ngày sinh</label>
+                                <input type="date" class="form-control" id="dob" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Địa chỉ</label>
+                                <input type="text" class="form-control" id="address" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-primary" id="save-student">Lưu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div style="float: left;">
+            <!-- add button that opens the modal -->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#studentModal">Thêm sinh viên</button>
+        </div>
+
+        <div style="float: right;">
+            <!-- to xlsx -->
+            <button class="btn btn-primary" id="to-xlsx">Xuất file Excel</button>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
