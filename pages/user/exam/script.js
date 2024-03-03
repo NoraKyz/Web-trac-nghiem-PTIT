@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async function () {
     initExitButton();
-    initSubmitButton();
     await displayQuestion();
+    initSubmitButton();
     startCountDownTime();
 });
 
@@ -26,7 +26,7 @@ async function getQuestionData() {
     try {
         const response = await fetch(questionDataUrl);
         let data = await response.json();
-        return data.questions;
+        return data.exams[0].questions;
     } catch (error) {
         console.error('Error fetching question data:', error);
         return null;
