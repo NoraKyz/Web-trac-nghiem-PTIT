@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', async function () {
+    initExitButton();
+    initSubmitButton();
     await displayQuestion();
     startCountDownTime();
-    initSubmitButton();  
-    initExitButton();
 });
 
 
@@ -79,6 +79,6 @@ function initSubmitButton() {
 function initExitButton() {
     let exitButton = document.getElementById('exit-button');
     exitButton.addEventListener('click', function () {
-        alert('Thoát bài thi');
+        window.history.back();
     });
 }
