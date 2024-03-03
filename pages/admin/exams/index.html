@@ -58,10 +58,12 @@
                             <label for="exam-file" class="form-label">Upload</label>
                             <input type="file" class="form-control" id="exam-file" >
                         </div>
+                        <div id = "question-list">
+                        </div>
                         <!-- thêm nút Add questions -->
-                        <button type="button" class="btn btn-primary mx-3 my-3" id="add-questions-button">Add questions</button>
-                        <button type="submit" class="btn btn-primary mx-3 my-3" id="save-exam-button">Save</button>
-
+                        <button type="submit" class="btn btn-primary mx-3 my-3" id="add-questions-button">Add questions</button>
+                        <button type="submit" class="btn btn-primary mx-3 my-3" id="save-exam-button">Save Exam</button>
+                        
                         <script>
                             var type = document.getElementById('exam-type');
                             var date = document.getElementById('exam-date');
@@ -81,7 +83,52 @@
             </div>
         </div>
     </div>
-    
+    <!-- Modal for add question -->
+    <div class="modal" id="add-question-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-3">Add Question</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="add-question-form">
+                        <div class="mb-3 mx-3">
+                            <label for="question-content" class="form-label">Question Content</label>
+                            <input type="text" class="form-control" id="question-content" required>
+                        </div>
+                        <div class="mb-3 mx-3">
+                            <label class="form-label">Options</label>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="option-0" placeholder="Option 0" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="option-1" placeholder="Option 1" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="option-2" placeholder="Option 2" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="option-3" placeholder="Option 3" required>
+                            </div>
+                        </div> 
+                        <div class="mb-3 mx-3">
+                            <label for="correct-answer" class="form-label">Correct Answer</label>
+                            <select class="form-select" id="correct-answer" required>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>                       
+                        <button type="button" class="btn btn-primary mx-3 my-3" id="save-question-modal-button">Save Question</button>
+                    </form>
+                    <script src="script.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header for exam list -->
     <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="d-flex align-items-left mr-5">
