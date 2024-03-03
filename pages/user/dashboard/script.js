@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
     initSearchLogic();
     initFilterByStatusLogic();
-    initExamList();
+    await initExamList();
 });
 
 function onClickStartExam(){
