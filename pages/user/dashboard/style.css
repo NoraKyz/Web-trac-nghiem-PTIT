@@ -1,0 +1,42 @@
+/* Existing styles from your login page */
+body {
+    background-color: #f8f9fa;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styles for the quiz dashboard */
+.exam-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+}
+
+.list-group-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background-color: #d30000;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #bb0000ab;
+    color: white;
+}
