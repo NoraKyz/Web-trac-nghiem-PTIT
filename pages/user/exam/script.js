@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', async function () {
-    await displayQuestion();
-    startCountDownTime();
-    initSubmitButton();  
     initExitButton();
+    await displayQuestion();
+    initSubmitButton();
+    startCountDownTime();
 });
 
 
@@ -26,7 +26,7 @@ async function getQuestionData() {
     try {
         const response = await fetch(questionDataUrl);
         let data = await response.json();
-        return data.questions;
+        return data.exams[0].questions;
     } catch (error) {
         console.error('Error fetching question data:', error);
         return null;
@@ -79,6 +79,6 @@ function initSubmitButton() {
 function initExitButton() {
     let exitButton = document.getElementById('exit-button');
     exitButton.addEventListener('click', function () {
-        alert('Thoát bài thi');
+        window.history.back();
     });
 }

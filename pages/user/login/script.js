@@ -15,11 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+function onClickSignUp() {
+    window.location.href = "../../user/register/index.html";
+}
+
 async function onClickLogin() {
     const username = document.getElementById('username-field').value;
     const password = document.getElementById('password-field').value;
-
-    console.log('Username:', username, 'Password:', password);
 
     if (validateInput(username, password)) {
         let user = await getUserByUsername(username);
@@ -29,7 +31,7 @@ async function onClickLogin() {
         } else if (password != user.password) {
             alert("Username or password is incorrect!");
         } else {
-            alert("Login successful!");
+            window.location.replace("../../user/dashboard/index.html");
         }
     }
 }
