@@ -1,3 +1,11 @@
+logoutBtn = document.getElementById('logoutBtn');
+logoutBtn.addEventListener('click', function () {
+    window.location.href = "../login_admin/index.html";
+});
+dashboard = document.getElementById('dashboard');
+dashboard.addEventListener('click', function () {
+    window.location.href = "../dashboard/index.html";
+});
 var students = [
     {
         id: 1,

@@ -13,44 +13,51 @@
 </head>
 
 <body>
-    <!-- an image sticky on bottom center -->
     <img src="https://png.pngtree.com/png-clipart/20230825/original/pngtree-work-schedule-time-management-planning-picture-image_8761110.png" alt="logo"
         class="position-absolute bottom-0 start-50 translate-middle-x d-none d-md-block" style="z-index: -1;"
         height="400px">
-    <nav class="navbar navbar-expand-lg navbar-light bg-#d3000 ">
-        <div class="container">
-            <a class="navbar-brand" href="#"><h2 class="text-center text-light ">Admin dashboard</h2></a>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="d-flex align-items-left mx-5">
+            <a id="dashboard" class="navbar-brand" href="#">
+                <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="logo" width="32" height="32"
+                  class="d-inline-block align-text-top bg-white p-1 rounded-5">
+                <h5 class="d-inline text-white mx-1">Admin Dashboard</h5>
+            </a>
         </div>
+        <a id="logoutBtn" class="navbar-brand mx-5 ms-auto" href="#">
+            <i class="bi bi-box-arrow-right text-white"></i>
+            <h6 class="d-inline text-white mx-1">Log out</h6>
+        </a>
     </nav>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <div class="alert alert-warning mt-4">
                     <div class="card-body">
-                        <h5 class="card-title">Quản lý kỳ thi</h5>
+                        <h5 class="card-title">Exams Management</h5>
                         <hr>
-                        <p class="card-text">Quản lý thông tin kỳ thi, thêm, sửa, xóa kỳ thi</p>
-                        <a href="#" class="btn btn-primary">Xem</a>
+                        <p class="card-text">Manage exams, add, edit, delete exams</p>
+                        <a href="#" class="btn btn-primary" id ="view-exams">Go</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card alert-success mt-4">
                     <div class="card-body">
-                        <h5 class="card-title">Quản lý sinh viên</h5>
+                        <h5 class="card-title">Students Management</h5>
                         <hr>
-                        <p class="card-text">Quản lý thông tin sinh viên, thêm, sửa, xóa sinh viên</p>
-                        <a href="#" class="btn btn-primary" id="view-students">Xem</a>
+                        <p class="card-text">Manage students, add, edit, delete students</p>
+                        <a href="#" class="btn btn-primary" id="view-students">Go</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="alert alert-primary mt-4">
                     <div class="card-body">
-                        <h5 class="card-title">Thống kê</h5>
+                        <h5 class="card-title">Analytic</h5>
                         <hr>
-                        <p class="card-text">Xem thống kê kỳ thi, sinh viên, điểm số</p>
-                        <a href="#" class="btn btn-primary" id="view-analytics">Xem</a>
+                        <p class="card-text">View the analytics of the exams, students, score</p>
+                        <a href="#" class="btn btn-primary" id="view-analytics">Go</a>
                     </div>
                 </div>
             </div>
