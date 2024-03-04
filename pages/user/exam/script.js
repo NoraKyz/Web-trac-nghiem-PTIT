@@ -73,6 +73,7 @@ function initSubmitButton() {
     let submitButton = document.getElementById('submit-button');
     submitButton.addEventListener('click', function () {
         alert('Nộp bài thành công');
+        window.location.replace("../../user/exam_result/index.html");
     });
 }
 
