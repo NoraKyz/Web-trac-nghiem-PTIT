@@ -35,9 +35,9 @@ async function getQuestionData() {
 
 function createQuestionElement(question, id) {
     let html = `<div class="question mt-2 p-2">
-        <h6 class="question-id">Câu ${id}:</h6>
-        <p class="question-content">${question.content}</p>
-        <div class="container-option">`;
+        <h6 class="question-id mx-5">Câu ${id}:</h6>
+        <p class="question-content mx-5">${question.content}</p>
+        <div class="container-option mx-5">`;
 
     let ophtml = '';
     for (let i = 0; i < question.answers.length; i++) {

@@ -28,9 +28,9 @@ function onClickExit(){
 }
 
 function createQuestionHTML(question, index, userAnswerIndex, isCorrect) {
-    let html = `<h6 class="question-id">Question ${index + 1}:</h6>
-                <p class="question-content">${question.content}</p>
-                <div class="container-option">`;
+    let html = `<h6 class="question-id ms-3">Question ${index + 1}:</h6>
+                <p class="question-content ms-3">${question.content}</p>
+                <div class="container-option ms-3">`;
 
     question.answers.forEach((answer, i) => {
         let iconHtml = '';

@@ -10,15 +10,14 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Additional styles for the quiz dashboard */
 .exam-card {
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
     color: #333;
     font-weight: bold;
 }
@@ -39,4 +38,7 @@ body {
 .btn:hover {
     background-color: #bb0000ab;
     color: white;
+}
+.navbar {
+    background-color: #d30000;
 }

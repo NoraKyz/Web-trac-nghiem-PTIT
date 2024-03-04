@@ -14,22 +14,33 @@
 
 <body>
     <div class="container-fluid">
-        <nav class="result-header navbar fixed-top navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="exit-exam">
-                    <button type="button" class="btn btn-outline-danger" id="exit-button" onclick="onClickExit()">Thoát</button>
+        <nav class="result-header navbar fixed-top ">
+            <div class="d-flex align-items-center">
+                <a id="dashboard" class="navbar-brand ms-5" href="#">
+                    <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="logo" width="32" height="32"
+                        class="d-inline-block align-text-top bg-white p-1 rounded-5">
+                    <h5 class="d-inline text-white mx-1">Exam</h5>
+                </a>
+                <div class="container-fluid">
+                    <div class="exit-exam">
+                        <button type="button" class="btn btn-outline-light" id="exit-button" onclick="onClickExit()">Thoát</button>
+                    </div>
                 </div>
             </div>
         </nav>
-        <div class="result-summary">
-            <h3 id="score-total">Score: 0/0</h3>
-            <h3 id="grade">Grade: 0.0/10.0</h3>
-        </div>
-        <div class="form-question">
-            <div id="container-question">
-
+        <div class="row justify-content-center">
+            
+            <div class="result-summary alert-primary col-md-5 text-center ">
+                <h3 id="score-total">Score: 0/0</h3>
+                <h3 id="grade">Grade: 0.0/10.0</h3>
+            </div>
+            <div class="form-question col-md-7">
+                <div id="container-question">
+    
+                </div>
             </div>
         </div>
+        
     </div>
     <script src="script.js"></script>
 </body>

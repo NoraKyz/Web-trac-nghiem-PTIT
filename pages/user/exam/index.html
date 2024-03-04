@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
     <!-- image logo -->
     <link rel="icon" href="https://code.ptit.edu.vn/2020/images/logo_ptit.png">
     <title>Exam</title>
@@ -21,23 +22,31 @@
     <div class="container-fuild">
         <div class="row justify-content-center">
             <div class="col-md-12">
-
-                <nav class="exam-header navbar fixed-top navbar-light bg-light">
-                    <div class="container-fluid">
-                        <div class="exit-exam">
-                            <button type="button" class="btn btn-outline-danger" id="exit-button">Thoát</button>
+                <nav class="exam-header navbar fixed-top">
+                    <div class="container-fluid d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <a id="dashboard" class="navbar-brand mx-4" href="#">
+                                <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="logo" width="32" height="32"
+                                    class="d-inline-block align-text-top bg-white p-1 rounded-5">
+                                <h5 class="d-inline text-white mx-1">Exam</h5>
+                            </a>
+                            <div class="exit-exam">
+                                <button type="button" class="btn btn-outline-light" id="exit-button">Thoát</button>
+                            </div>
                         </div>
                         <div>
-                            <p id="time-reamining">Thời gian còn lại: 60:00</p>
+                            <p id="time-reamining" class="mb-0 text-white">Thời gian còn lại: 60:00</p>
                         </div>
                     </div>
                 </nav>
+                
+                <div class="row justify-content-center">
+                    <div class="form-question col-md-6 ">
+                        <div id="container-question">
+                            <!-- Add question -->
+                        </div>
 
-                <div class="form-question">
-                    <div id="container-question">
-                        <!-- Add question -->
                     </div>
-
                 </div>
             </div>
         </div>

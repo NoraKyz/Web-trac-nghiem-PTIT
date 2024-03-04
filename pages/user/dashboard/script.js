@@ -71,14 +71,18 @@ async function initExamList(){
         }
 
         examElement.innerHTML = `
-            <div class="card-header">${exam.name}</div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    Start Time: ${examAvailability}<br>
-                    Duration: ${exam.duration} minutes
-                    <button class="btn float-end" onclick="onClickStartExam()" ${buttonDisabled}>Start</button>
-                </li>
-            </ul>
+            <div class="card alert-warning">
+                <div class="card-header"><h5 class="card-tittle">${exam.name}</h5></div>
+                <div class="card-body alert-warning">  
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p>Start: ${examAvailability}</p>
+                            <p>Duration: ${exam.duration} minutes</p>
+                        </div>
+                        <button class="btn float-start" onclick="onClickStartExam()" ${buttonDisabled}>Start</button>
+                    </div>
+                </div>
+            </div>
         `;
 
         examListDiv.appendChild(examElement);
@@ -97,3 +101,8 @@ async function getExamData() {
         return null;
     }
 }
+// Xử lý sự kiện khi ấn nút logout
+logoutBtn = document.getElementById('logoutBtn');
+logoutBtn.addEventListener('click', function () {
+    window.location.href = "../login/index.html";
+});
