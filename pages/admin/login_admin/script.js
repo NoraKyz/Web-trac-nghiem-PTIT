@@ -5,7 +5,7 @@ login_button.addEventListener("click", function () {
     var password_field = document.getElementById("password-field");
     var email = email_field.value;
     var password = password_field.value;
-    if (email === "alexcao194@gmail.com" && password === "admin") {
+    if (email === "admin" && password === "admin") {
         window.location.replace("../../admin/dashboard/index.html");
     } else {
         alert("Invalid credentials");
